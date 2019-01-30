@@ -1,0 +1,23 @@
+<div class="example-container">
+<a>
+ <button mat-raised-button color="primary" (click)= "openModal()">Create</button>
+</a>
+
+<div class="container" *ngIf="users;else loader">
+  <div *ngIf="users.length > 0">
+    <div>
+      <app-usercard *ngFor="let user of users" [user]="user">
+        {{user.name}}
+      </app-usercard>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<ng-template #loader>
+  loading....
+</ng-template>

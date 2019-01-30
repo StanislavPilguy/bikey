@@ -1,0 +1,70 @@
+   <div class="example-container">
+      <h2>Fill the form</h2>
+      <mat-form-field>
+        <input matInput placeholder="name" [(ngModel)]="user.name" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="balance" [(ngModel)]="user.balance" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="picture" [(ngModel)]="user.picture" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="age" [(ngModel)]="user.age" required>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-select placeholder="Select eye" (selectionChange)="onSelectColorForEye($event)">
+          <mat-option *ngFor="let eye of eyeColor" [value]="eye">
+            {{eye}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Select gender" (selectionChange)="onSelectGender($event)">
+          <mat-option *ngFor="let gender of genders" [value]="gender">
+            {{gender}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="company" [(ngModel)]="user.company" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="email" [(ngModel)]="user.email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="phone" [(ngModel)]="user.phone" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Address"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="About"></textarea>
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" (click)="onAddNewUser()">Add</button>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+

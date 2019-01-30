@@ -1,0 +1,50 @@
+<div class="container">
+  <p>
+    <img [src]="user.picture" alt="img" width="50" height="50">
+  </p>
+  <p>
+    {{user.name}}
+  </p>
+
+  <p *ngIf="isView">
+    {{user.about}}
+  </p>
+
+  <p *ngIf="isView">
+    {{user.address}}
+  </p>
+
+  <p *ngIf="isView" >
+    {{user.balance}}
+  </p>
+
+
+  <p *ngIf="isView" >
+    {{user.email}}
+  </p>
+
+  <p *ngIf="isView" >
+    {{user.eyeColor}}
+  </p>
+
+  <p *ngIf="isView" >
+    {{user.gender}}
+  </p>
+
+  <p *ngIf="isView" >
+    {{user.phone}}
+  </p>
+
+
+
+  <a routerLink="{{user.id}}" *ngIf="!isView">
+    <button mat-raised-button color="primary">view detail</button>
+  </a>
+
+  <a>
+    <button mat-raised-button color="primary" (click)= "dellUserById()">Delete</button>
+  </a>
+
+</div>
+
+

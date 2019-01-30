@@ -1,0 +1,12 @@
+
+
+<div *ngIf="user;else loader">
+  <app-usercard [user]="user" [isView]="true"></app-usercard>
+</div>
+
+
+
+
+<ng-template #loader>
+  loading....
+</ng-template>
